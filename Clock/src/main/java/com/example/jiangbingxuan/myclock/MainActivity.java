@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     private void start(){
+        //跳转时钟页面
         Intent intent=new Intent();
         intent.setClass(this,ClockActivity.class);
         startActivity(intent);
