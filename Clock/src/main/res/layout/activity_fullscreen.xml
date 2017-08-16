@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.example.jiangbingxuan.myclock.ClockActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <RelativeLayout
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        android:background="#000000" >
+        <RelativeLayout
+            android:id="@+id/anim_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:scaleType="fitCenter"
+                android:id="@+id/my_bgimage_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <RelativeLayout
+                android:background="#66000000"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_bg"
+            android:background="@drawable/bg_a"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></RelativeLayout>
+        <TextClock
+            android:layout_marginTop="38dp"
+            android:id="@+id/tc_textclockday"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#99ffffff"
+            />
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextClock
+                android:id="@+id/tc_textclock"
+                android:textSize="100sp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#bbffffff"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_set"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:background="#22ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <TextView
+                android:textColor="#55ffffff"
+                android:text="时钟大小："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <SeekBar
+                android:background="#55ffffff"
+                android:id="@+id/id_seekBartimesize"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:max="300"
+                android:progress="0"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="#bbffffff"
+            android:text="JBX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="#bbffffff"
+            android:text="LMM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+       </RelativeLayout>
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/dummy_button"
+                android:textColor="#676753"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="SETTING" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>
